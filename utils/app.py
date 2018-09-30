@@ -22,7 +22,7 @@ class Application(Frame):
         self.btn_calculator.pack(side=LEFT, padx=10, pady=10)
         self.txt_result = Label(self.frm_calculator, text='', state='disabled', anchor=CENTER, bg="white")
         self.txt_result.pack(fill=X, side=RIGHT, padx=10, pady=10, expand=True)
-        with open('../models/nb_model_0.pkl', 'rb') as f:
+        with open('models/nb_model_0.pkl', 'rb') as f:
             self.model = pickle.load(f)
         self.preprocess = PreProcess()
         with open('/home/chiendb/data/aclImdb/vocab.txt', 'r') as f:
