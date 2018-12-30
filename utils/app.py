@@ -44,9 +44,3 @@ class Application(Frame):
             else:
                 result.append(self.vocab[word])
         return result
-
-
-root = Tk()
-root.geometry("600x500+600+600")
-app = Application(root)
-root.mainloop()

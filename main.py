@@ -21,7 +21,7 @@ for i in range(k_fold):
     target_test = target[batch_size*i: batch_size*(i+1)]
     model.fit(features_train, target_train)
     y_pred = model.predict(features_test)
-    print('model {}: acc: {}, f1_score: {}'.format(i, accuracy_score(target_test, y_pred), f1_score(target_test, y_pred)))
+    print('model {}: acc: {}, f1_score: {}'.format(i, accuracy_score(target_test, y_pred), f1_score(target_test, y_pred, average=None)))
     with open('models/nb_model_' + str(i) + '.pkl', 'wb+') as f:
         pickle.dump(model, f)
 
